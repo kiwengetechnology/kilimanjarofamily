@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kilimanjaro Family – Michango</title>
+<style>
+:root{--bg:#eef3fb;--card:#fff;--tx:#0f1e3d;--mut:#5a6a8a;--pri:#1b4fa8;--pri2:#12306b;--acc:#f2a900;--bd:#d3deef;--bad:#c0392b;--ok:#17803d;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0b1428;--card:#13203d;--tx:#e8eefb;--mut:#9fb0d0;--pri:#4a8dff;--pri2:#2f6fe0;--bd:#24345a;--bad:#ff7b6b;--ok:#4cd18a}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0b1428;--card:#13203d;--tx:#e8eefb;--mut:#9fb0d0;--pri:#4a8dff;--pri2:#2f6fe0;--bd:#24345a;--bad:#ff7b6b;--ok:#4cd18a}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.45}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:#0b1f45}
+
+/* ===== HEADER (smart phone) ===== */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:linear-gradient(135deg,#0b1f45,#1b4fa8);color:#fff;padding:8px max(12px,env(safe-area-inset-right)) 8px max(12px,env(safe-area-inset-left));border-bottom:3px solid #f2a900;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+.hrow{display:flex;align-items:center;gap:10px;max-width:980px;margin:0 auto}
+.ht{flex:1;min-width:0}
+.logo{width:44px;height:44px;border-radius:50%;border:2px solid #f2a900;background:#0b1f45;flex:none}
+header h1{margin:0;font-size:1rem;letter-spacing:.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+header h1 span{color:#f2a900}
+header small{display:block;opacity:.85;font-size:.7rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#hb{display:flex;gap:6px;flex:none}
+.hbtn{min-height:40px;min-width:40px;padding:0 12px;border-radius:12px;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35);font-size:1.1rem;line-height:1}
+.cbar{display:flex;gap:8px;overflow-x:auto;padding:8px 12px;background:#0f2757;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.cbar::-webkit-scrollbar{display:none}
+.cbar a,.cbar span{flex:none;white-space:nowrap;color:#fff;text-decoration:none;font-size:.8rem;padding:7px 12px;border-radius:99px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2)}
+@media(max-width:480px){.hbtn span{display:none}}
+@media(min-width:700px){.cbar{justify-content:center}header{padding-top:10px;padding-bottom:10px}.logo{width:52px;height:52px}header h1{font-size:1.2rem}header small{font-size:.8rem}}
+/* ===== END HEADER ===== */
+
+.lg2{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));max-width:900px;margin:1vh auto;align-items:start}
+.car{position:relative;height:340px;border-radius:16px;overflow:hidden;box-shadow:0 6px 20px rgba(11,31,69,.3)}
+.sl{position:absolute;inset:0;opacity:0;transition:opacity .9s;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;padding:24px}.sl.on{opacity:1}
+.sl .ic{font-size:76px;line-height:1}.sl h3{margin:12px 0 6px;font-size:1.45rem;color:#ffd35c}.sl p{margin:0;max-width:380px}
+.dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:6px}.dots i{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.45);cursor:pointer;transition:.3s}.dots i.on{background:#f2a900;width:22px}
+.wrap{max-width:980px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.card h2{margin:0 0 12px;font-size:1.05rem}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.stat{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px}
+.stat span{color:var(--mut);font-size:.82rem}.stat b{display:block;font-size:1.4rem;margin-top:4px}
+.stat.big{background:linear-gradient(135deg,var(--pri),var(--pri2));color:#fff;border:0}.stat.big span{color:#dce8ff}
+label{display:block;font-size:.85rem;color:var(--mut);margin:10px 0 4px}
+input,select,textarea,button{font:inherit}
+input,select,textarea{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--tx)}
+button{cursor:pointer;border:0;border-radius:10px;padding:10px 16px;background:var(--pri);color:#fff;font-weight:600}
+button.sec{background:transparent;color:var(--pri);border:1px solid var(--pri)}button.del{background:var(--bad)}button.sm{padding:5px 10px;font-size:.8rem}
+.hbtn.sec{color:#fff}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:end}.row>*{flex:1;min-width:150px}
+nav{display:flex;gap:6px;overflow-x:auto;margin-bottom:16px}nav button{background:var(--card);color:var(--tx);border:1px solid var(--bd);white-space:nowrap}nav button.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.9rem}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--bd);vertical-align:top}th{color:var(--mut);font-weight:600;font-size:.8rem}
+.tag{display:inline-block;padding:2px 8px;border-radius:99px;font-size:.75rem;background:var(--bd)}.ok{color:var(--ok)}.bad{color:var(--bad)}
+.bar{height:10px;background:var(--bd);border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc)}
+.login{max-width:400px;margin:8vh auto}.msg{padding:10px;border-radius:10px;margin-top:10px;font-size:.9rem;background:var(--bd)}
+.rc{font-size:.78rem;color:var(--mut);max-width:260px;word-break:break-word}
+.sl .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sl .shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,18,45,.88),rgba(6,18,45,.35))}
+.sl .tx{position:relative;z-index:2}.dots{z-index:3}
+input,select,textarea{font-size:16px}button{min-height:40px}
+@media (max-width:600px){.wrap{padding:12px}.card{padding:14px}table{font-size:.82rem}th,td{padding:6px}.car{height:270px}.sl .ic{font-size:56px}.sl h3{font-size:1.2rem}.sl p{font-size:.9rem}
+.row>*{min-width:100%}.stat b{font-size:1.2rem}}
+</style>
+</head>
+<body>
+<header><div class="hrow"><img id="lg" alt="Kilimanjaro Family" class="logo" onerror="lx(this)"><div class="ht"><h1>KILIMANJARO <span>FAMILY</span></h1><small>Ruvuma • Michango na matumizi</small></div><div id="hb"></div></div></header>
+<div class="cbar"><a href="tel:+255660165662">📞 0660 165 662</a><a href="mailto:kilimanjarofamilyruvuma@gmail.com">✉️ Barua pepe</a><span>📍 P. O. Box 2356, Ruvuma</span></div>
+<div id="ld" style="display:none;position:fixed;left:0;right:0;top:0;z-index:60;background:#f2a900;color:#0b1f45;text-align:center;font-size:.8rem;font-weight:600;padding:3px">Inasubiri Google Sheet…</div>
+<div class="wrap" id="app"></div>
+<script>
+/* LOGO inatoka kwenye folder la images/ (jina: logo.png, logo.jpg, logo.jpeg au logo.webp) */
+const LOGOS=["logo.png","logo.jpg","logo.jpeg","logo.webp","Logo.png","Logo.jpg","Logo.jpeg","LOGO.png","LOGO.jpg"];
+let LOGO="images/"+LOGOS[0];
+function lx(el){const k=+(el.dataset.k||0)+1;if(k>=LOGOS.length){el.onerror=null;el.style.visibility="hidden";return}el.dataset.k=k;LOGO="images/"+LOGOS[k];el.src=LOGO}
+/* ===== GOOGLE SHEETS STORAGE ===== */
+const API_URL="https://script.google.com/macros/s/AKfycbw2eQ7yCKvLfcdUqtrXvEC_D14d00KDF9Cs8RkdPOqLS302qTjyYzkGJvRH5x3X52Yh/exec";
+const LOCAL_KEY="kf_data_v1";
+let S={members:[],contribs:[],expenses:[],meta:null};
+async function api(action,payload){
+ if(!API_URL||API_URL.indexOf("PASTE")===0)throw new Error("API_URL haijawekwa. Weka Web app URL ya Apps Script kwenye code.");
+ const r=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(Object.assign({action},payload||{}))});
+ let j;try{j=await r.json()}catch(e){throw new Error("Seva haikujibu vizuri. Hakikisha deployment ni 'Anyone'.")}
+ if(!j.ok)throw new Error(j.error||"Hitilafu ya seva");
+ return j}
+function setBusy(b){const l=document.querySelector("#ld");if(l)l.style.display=b?"block":"none";document.body.style.cursor=b?"progress":""}
+function applyData(d){S={members:d.members||[],contribs:d.contribs||[],expenses:d.expenses||[],meta:d.meta||null}}
+async function call(action,payload){
+ setBusy(true);
+ try{const j=await api(action,Object.assign({u:session.u,p:session.p},payload||{}));if(j.data)applyData(j.data);return j}
+ catch(e){alert("Hitilafu: "+e.message);return null}
+ finally{setBusy(false)}}
+function legacy(){try{const r=localStorage.getItem(LOCAL_KEY);if(r){const d=JSON.parse(r);if(d&&((d.members||[]).length+(d.contribs||[]).length+(d.expenses||[]).length))return d}}catch(e){}return null}
+function legacyCard(){const d=legacy();if(!d)return"";
+ return`<div class="card"><h2>Data ya zamani (kwenye kivinjari hiki)</h2><p class="rc">Imepatikana: wanachama ${(d.members||[]).length}, michango ${(d.contribs||[]).length}, matumizi ${(d.expenses||[]).length}. Bonyeza kuzihamishia Google Sheet (zilizopo tayari hazirudiwi).</p><button onclick="importLegacy()">Hamisha kwenda Google Sheet</button></div>`}
+async function importLegacy(){const d=legacy();if(!d)return;if(!confirm("Hamisha data ya zamani kwenda Google Sheet?"))return;
+ const j=await call("importAll",{data:{members:d.members||[],contribs:d.contribs||[],expenses:d.expenses||[]}});
+ if(j){try{localStorage.setItem(LOCAL_KEY+"_backup",localStorage.getItem(LOCAL_KEY));localStorage.removeItem(LOCAL_KEY)}catch(e){}msg="Data imehamishwa: rekodi "+j.added+" mpya.";render()}}
+let session=null,tab="home",editC=null,msg="";
+const FEE=10000,uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+const $=s=>document.querySelector(s),T=n=>Number(n||0).toLocaleString("en-US");
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const digits=s=>String(s).replace(/\D/g,""),today=()=>new Date().toISOString().slice(0,10);
+const mname=id=>(S.members.find(m=>m.id===id)||{name:"?"}).name;
+const nextM=k=>{let [y,m]=k.split("-").map(Number);m++;if(m>12){m=1;y++}return y+"-"+String(m).padStart(2,"0")};
+const SW=["Januari","Februari","Machi","Aprili","Mei","Juni","Julai","Agosti","Septemba","Oktoba","Novemba","Desemba"];
+const mlab=k=>SW[+k.slice(5)-1]+" "+k.slice(0,4);
+
+function calc(m){
+ const my=S.contribs.filter(c=>c.mid===m.id);
+ const entry=my.filter(c=>c.type==="kiingilio").reduce((a,c)=>a+c.amt,0);
+ const fees=my.filter(c=>c.type==="ada").reduce((a,c)=>a+c.amt,0);
+ const total=entry+fees;
+ const j=new Date(m.joined),n=new Date();
+ const months=Math.max(1,(n.getFullYear()-j.getFullYear())*12+n.getMonth()-j.getMonth()+1);
+ const pm={};
+ my.filter(c=>c.type==="ada").sort((a,b)=>(a.month||a.date.slice(0,7)).localeCompare(b.month||b.date.slice(0,7))||a.date.localeCompare(b.date)).forEach(c=>{let r=c.amt,k=c.month||c.date.slice(0,7);while(r>0){const p=pm[k]||0,t=Math.min(r,FEE-p);if(t>0){pm[k]=p+t;r-=t}k=nextM(k)}});
+ const cur=today().slice(0,7),sj=m.joined.slice(0,7),ks=Object.keys(pm);
+ const first=ks.reduce((a,k)=>k<a?k:a,sj),last=ks.reduce((a,k)=>k>a?k:a,cur>sj?cur:sj);
+ const list=[];for(let k=first;k<=last;k=nextM(k))list.push({k,paid:pm[k]||0});
+ const past=list.filter(x=>x.k<=cur);
+ return{entry,fees,total,entryLeft:Math.max(0,m.entryFee-entry),months:past.length,covered:list.filter(x=>x.paid>=FEE).length,arrears:past.reduce((a,x)=>a+Math.max(0,FEE-x.paid),0),ahead:list.filter(x=>x.k>cur).reduce((a,x)=>a+x.paid,0),list};
+}
+function G(){
+ const inc=S.meta?S.meta.inc:S.contribs.reduce((a,c)=>a+c.amt,0),exp=S.expenses.reduce((a,e)=>a+e.amt,0);
+ return{inc,exp,bal:inc-exp};
+}
+async function login(f){
+ const u=f.u.value.trim(),p=f.p.value.trim();
+ setBusy(true);
+ try{const j=await api("login",{u,p});applyData(j.data);session={role:j.role,id:j.memberId||null,u,p};tab="home";msg=""}
+ catch(e){msg=e.message}
+ finally{setBusy(false)}
+ render()}
+function logout(){session=null;msg="";S={members:[],contribs:[],expenses:[],meta:null};render()}
+async function refresh(){if(!session)return;setBusy(true);
+ try{const j=await api("login",{u:session.u,p:session.p});applyData(j.data)}catch(e){alert("Hitilafu: "+e.message)}finally{setBusy(false)}render()}
+
+function render(){
+ $("#hb").innerHTML=session?`<button class="hbtn" aria-label="Pakia" onclick="refresh()">↻<span> Pakia</span></button><button class="hbtn" aria-label="Toka" onclick="logout()">⏻<span> Toka</span></button>`:"";
+ $("#app").innerHTML=!session?loginView():session.role==="admin"?adminView():memberView();
+ if(!session)startCar();else clearInterval(carT);
+}
+const SLIDES=[["","Umoja ni Nguvu","Tukishikana mikono, hakuna mlima usioshindika.","#0b1f45,#1b4fa8"],
+["","Fanya Kazi kwa Bidii","Jasho la leo ndilo mavuno ya kesho yetu sote.","#12306b,#2a6fd6"],
+["","Kataa Ubinafsi","Mafanikio ya kweli ni yale tunayoyajenga pamoja, si kwa kujijali peke yetu.","#0b1f45,#17803d"],
+["","Weka Akiba, Jenga Kesho","Mchango mdogo wa kila mwezi hujenga mustakabali mkubwa wa familia.","#1b4fa8,#0b1f45"],
+["","Tufikie Kilele Pamoja","Kama mlima Kilimanjaro, tusimame imara na kwa fahari.","#0b1f45,#2f6fe0"]];
+const EXT=["jpg","jpeg","png","webp","JPG","JPEG","PNG"];
+function nx(i){const k=+(i.dataset.k||0)+1;if(k>=EXT.length){i.remove();return}i.dataset.k=k;i.src="images/picha"+i.dataset.n+"."+EXT[k]}
+let carT=null;
+function startCar(){clearInterval(carT);const s=document.querySelectorAll(".sl"),d=document.querySelectorAll(".dots i");if(!s.length)return;let i=0;
+ const go=n=>{i=n%s.length;s.forEach((x,k)=>x.classList.toggle("on",k===i));d.forEach((x,k)=>x.classList.toggle("on",k===i))};
+ d.forEach((x,k)=>x.onclick=()=>{go(k);clearInterval(carT);carT=setInterval(()=>go(i+1),4500)});go(0);carT=setInterval(()=>go(i+1),4500)}
+function loginView(){return`<div class="lg2"><div class="car">${SLIDES.map((x,n)=>`<div class="sl" style="background:radial-gradient(circle at 85% 15%,rgba(242,169,0,.35),transparent 45%),linear-gradient(145deg,${x[3]})"><img class="bg" data-n="${n+1}" alt="" src="images/picha${n+1}.jpg" onerror="nx(this)"><div class="shade"></div><div class="tx"><div class="ic">${x[0]}</div><h3>${x[1]}</h3><p>${x[2]}</p></div></div>`).join("")}<div class="dots">${SLIDES.map(()=>"<i></i>").join("")}</div></div>
+<div class="card" style="margin:0"><div style="text-align:center"><img src="${LOGO}" alt="" style="width:88px;height:88px" onerror="lx(this)"></div><h2 style="text-align:center;margin-top:6px">Karibu Kilimanjaro Family</h2>
+<form onsubmit="login(this);return false"><label>Jina (mwanachama) / Username (admin)</label><input name="u" required autocomplete="username">
+<label>Namba ya simu (mwanachama) / Password (admin)</label><input name="p" type="password" required autocomplete="current-password">
+<div style="margin-top:14px"><button style="width:100%">Ingia</button></div></form>${msg?`<div class="msg bad">${esc(msg)}</div>`:""}</div></div>`}
+
+function stats(){const g=G();return`<div class="grid"><div class="stat big"><span>Hela iliyopo kikundini</span><b>TSh ${T(g.bal)}</b></div>
+<div class="stat"><span>Jumla ya michango</span><b>TSh ${T(g.inc)}</b></div><div class="stat"><span>Jumla ya matumizi</span><b>TSh ${T(g.exp)}</b></div>
+<div class="stat"><span>Wanachama</span><b>${S.meta?S.meta.count:S.members.length}</b></div></div>`}
+
+function memberView(){
+ const m=S.members.find(x=>x.id===session.id);if(!m)return"";
+ const c=calc(m),g=G(),pct=g.inc?c.total/g.inc*100:0,val=g.inc?pct/100*g.bal:0;
+ const my=S.contribs.filter(x=>x.mid===m.id).sort((a,b)=>b.date.localeCompare(a.date));
+ return`<h2 style="margin:4px 0 14px">Karibu, ${esc(m.name)}</h2>${stats()}<div style="height:16px"></div>
+<div class="card"><h2>Mchango wako</h2><div class="grid">
+<div class="stat"><span>Jumla uliyochangia</span><b>TSh ${T(c.total)}</b></div>
+<div class="stat"><span>Asilimia yako</span><b>${pct.toFixed(2)}%</b></div>
+<div class="stat"><span>Thamani ya sehemu yako</span><b>TSh ${T(Math.round(val))}</b></div></div>
+<div class="bar" style="margin-top:12px"><i style="width:${Math.min(100,pct)}%"></i></div></div>
+<div class="card"><h2>Hali ya ada</h2>
+<p>Kiingilio: TSh ${T(c.entry)} / ${T(m.entryFee)} ${c.entryLeft?`<span class="tag bad">Bado ${T(c.entryLeft)}</span>`:`<span class="tag ok">Kimekamilika</span>`}</p>
+<p>Ada ya mwezi (${T(FEE)}): umelipa miezi ${c.covered} kati ya ${c.months} ${c.arrears?`<span class="tag bad">Deni ${T(c.arrears)}</span>`:`<span class="tag ok">Uko sawa${c.ahead?` – mbele TSh ${T(c.ahead)}`:""}</span>`}</p>${monthTable(c)}</div>
+<div class="card"><h2>Historia ya michango</h2>${ctable(my,false)}</div>
+<div class="card"><h2>Matumizi ya kikundi</h2>${etable(false)}</div>`}
+
+function adminView(){
+ const tabs=[["home","Muhtasari"],["mem","Wanachama"],["con","Michango"],["exp","Matumizi"],["set","Nenosiri"]];
+ let b="";
+ if(tab==="home")b=stats()+`<div style="height:16px"></div><div class="card"><h2>Hali ya wanachama</h2>${summary()}</div>`;
+ if(tab==="mem")b=memberForm()+`<div class="card"><h2>Orodha ya wanachama</h2>${mtable()}</div>`;
+ if(tab==="con")b=contribForm()+`<div class="card"><h2>Michango yote</h2>${ctable([...S.contribs].sort((a,b)=>b.date.localeCompare(a.date)),true)}</div>`;
+ if(tab==="exp")b=expForm()+`<div class="card"><h2>Matumizi</h2>${etable(true)}</div>`;
+ if(tab==="set")b=`<div class="card"><h2>Badili nenosiri la admin</h2><form onsubmit="chPass(this);return false"><label>Nenosiri la sasa</label><input name="o" type="password" required>
+<label>Nenosiri jipya</label><input name="n" type="password" required minlength="4"><div style="margin-top:12px"><button>Hifadhi</button></div></form>${msg?`<div class="msg">${esc(msg)}</div>`:""}</div>
+<div class="card"><h2>Data</h2><button class="sec" onclick="exportData()">Pakua nakala ya data (JSON)</button></div>${legacyCard()}`;
+ return`<nav>${tabs.map(t=>`<button class="${tab===t[0]?"on":""}" onclick="tab='${t[0]}';editC=null;msg='';render()">${t[1]}</button>`).join("")}</nav>${b}`}
+
+function monthTable(c){const cur=today().slice(0,7);return`<div class="tw"><table><tr><th>Mwezi</th><th>Kiasi</th><th>Hali</th></tr>${[...c.list].reverse().map(x=>`<tr><td>${mlab(x.k)}</td><td>${T(x.paid)}</td><td>${x.paid>=FEE?'<span class="tag ok">Imelipwa</span>':x.paid>0?`<span class="tag">Sehemu (bado ${T(FEE-x.paid)})</span>`:x.k>cur?'<span class="tag">Haijafika</span>':'<span class="tag bad">Haijalipwa</span>'}</td></tr>`).join("")}</table></div>`}
+function viewRc(t,id){const x=(t==="c"?S.contribs:S.expenses).find(z=>z.id===id);if(!x)return;const d=document.createElement("div");d.style.cssText="position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;padding:16px;z-index:50";d.onclick=e=>{if(e.target===d)d.remove()};d.innerHTML=`<div class="card" style="max-width:480px;width:100%;max-height:80vh;overflow:auto;margin:0"><h2>Risiti</h2><p style="white-space:pre-wrap;word-break:break-word;margin:0 0 14px">${esc(x.rc)||"(hakuna)"}</p><button onclick="this.parentNode.parentNode.remove()">Funga</button></div>`;document.body.appendChild(d)}
+function tm(s){const w=$("#mw");w.style.display=s.value==="ada"?"":"none";w.querySelector("input").disabled=s.value!=="ada"}
+function summary(){
+ if(!S.members.length)return`<p class="rc">Hakuna wanachama bado.</p>`;
+ const g=G();
+ return`<div class="tw"><table><tr><th>Jina</th><th>Jumla</th><th>%</th><th>Ada ya mwezi</th></tr>${S.members.map(m=>{const c=calc(m);return`<tr><td>${esc(m.name)}</td><td>${T(c.total)}</td><td>${g.inc?(c.total/g.inc*100).toFixed(2):"0.00"}%</td><td>${c.arrears?`<span class="bad">Deni ${T(c.arrears)}</span>`:`<span class="ok">Sawa${c.ahead?` (+${T(c.ahead)})`:""}</span>`}</td></tr>`}).join("")}</table></div>`}
+
+function memberForm(){return`<div class="card"><h2>Sajili mwanachama</h2><form onsubmit="addMember(this);return false"><div class="row">
+<div><label>Jina kamili</label><input name="name" required></div><div><label>Namba ya simu (password)</label><input name="phone" required inputmode="tel"></div>
+<div><label>Kiingilio</label><select name="fee"><option value="50000">50,000</option><option value="30000">30,000</option></select></div>
+<div><label>Tarehe ya kujiunga</label><input name="joined" type="date" value="${today()}" required></div></div>
+<div style="margin-top:12px"><button>Sajili</button></div></form>${msg?`<div class="msg">${esc(msg)}</div>`:""}</div>`}
+function mtable(){return S.members.length?`<div class="tw"><table><tr><th>Jina</th><th>Simu</th><th>Kiingilio</th><th>Alijiunga</th><th></th></tr>${S.members.map(m=>`<tr><td>${esc(m.name)}</td><td>${esc(m.phone)}</td><td>${T(m.entryFee)}</td><td>${esc(m.joined)}</td><td><button class="sm del" onclick="delMember('${m.id}')">Futa</button></td></tr>`).join("")}</table></div>`:`<p class="rc">Hakuna wanachama.</p>`}
+async function addMember(f){
+ const phone=f.phone.value.trim();
+ if(S.members.some(m=>digits(m.phone)===digits(phone))){msg="Namba hii ya simu tayari imesajiliwa.";render();return}
+ const j=await call("addMember",{member:{id:uid(),name:f.name.value.trim(),phone,entryFee:+f.fee.value,joined:f.joined.value}});
+ if(j)msg="Mwanachama amesajiliwa.";render()}
+async function delMember(id){if(!confirm("Futa mwanachama huyu na michango yake yote?"))return;if(await call("delMember",{id}))render()}
+
+function contribForm(){
+ const e=editC?S.contribs.find(c=>c.id===editC):null;
+ if(!S.members.length)return`<div class="card"><p>Sajili wanachama kwanza.</p></div>`;
+ return`<div class="card"><h2>${e?"Hariri mchango":"Rekodi mchango"}</h2><form onsubmit="addContrib(this);return false"><div class="row">
+<div><label>Mwanachama</label><select name="mid">${S.members.map(m=>`<option value="${m.id}" ${e&&e.mid===m.id?"selected":""}>${esc(m.name)}</option>`).join("")}</select></div>
+<div><label>Aina</label><select name="type" onchange="tm(this)"><option value="ada" ${e&&e.type==="ada"?"selected":""}>Ada ya mwezi</option><option value="kiingilio" ${e&&e.type==="kiingilio"?"selected":""}>Kiingilio</option></select></div>
+<div><label>Kiasi (TSh)</label><input name="amt" type="number" min="1" required value="${e?e.amt:""}"></div>
+<div><label>Tarehe ya malipo</label><input name="date" type="date" required value="${e?e.date:today()}"></div>
+<div id="mw" style="${e&&e.type==="kiingilio"?"display:none":""}"><label>Mwezi wa ada</label><input name="month" type="month" required ${e&&e.type==="kiingilio"?"disabled":""} value="${e&&e.month?e.month:today().slice(0,7)}"></div></div>
+<label>Risiti (bandika SMS ya muamala)</label><textarea name="rc" rows="3" required>${e?esc(e.rc):""}</textarea>
+<div style="margin-top:12px;display:flex;gap:8px"><button>${e?"Hifadhi mabadiliko":"Hifadhi"}</button>${e?`<button type="button" class="sec" onclick="editC=null;render()">Ghairi</button>`:""}</div></form></div>`}
+async function addContrib(f){
+ const o={mid:f.mid.value,type:f.type.value,amt:+f.amt.value,date:f.date.value,month:f.type.value==="ada"?f.month.value:"",rc:f.rc.value.trim()};
+ const j=await call("saveContrib",{contrib:{id:editC||uid(),...o}});
+ if(j){editC=null;render()}}
+function ctable(list,adm){
+ if(!list.length)return`<p class="rc">Hakuna michango.</p>`;
+ return`<div class="tw"><table><tr><th>Tarehe</th>${adm?"<th>Mwanachama</th>":""}<th>Aina</th><th>Kiasi</th><th>Risiti</th>${adm?"<th></th>":""}</tr>${list.map(c=>`<tr><td>${esc(c.date)}</td>${adm?`<td>${esc(mname(c.mid))}</td>`:""}<td><span class="tag">${c.type==="ada"?"Ada – "+mlab(c.month||c.date.slice(0,7)):"Kiingilio"}</span></td><td>${T(c.amt)}</td><td><button class="sm sec" onclick="viewRc('c','${c.id}')">Angalia</button></td>${adm?`<td style="white-space:nowrap"><button class="sm sec" onclick="editC='${c.id}';render();scrollTo(0,0)">Hariri</button> <button class="sm del" onclick="delC('${c.id}')">Futa</button></td>`:""}</tr>`).join("")}</table></div>`}
+async function delC(id){if(!confirm("Futa mchango huu?"))return;if(await call("delContrib",{id}))render()}
+
+function expForm(){return`<div class="card"><h2>Rekodi matumizi</h2><form onsubmit="addExp(this);return false"><div class="row">
+<div><label>Maelezo</label><input name="d" required></div><div><label>Kiasi (TSh)</label><input name="a" type="number" min="1" required></div>
+<div><label>Tarehe</label><input name="t" type="date" value="${today()}" required></div></div>
+<label>Risiti / ushahidi (hiari)</label><textarea name="rc" rows="2"></textarea><div style="margin-top:12px"><button>Hifadhi</button></div></form></div>`}
+async function addExp(f){if(await call("addExpense",{expense:{id:uid(),desc:f.d.value.trim(),amt:+f.a.value,date:f.t.value,rc:f.rc.value.trim()}}))render()}
+function etable(adm){
+ if(!S.expenses.length)return`<p class="rc">Hakuna matumizi.</p>`;
+ return`<div class="tw"><table><tr><th>Tarehe</th><th>Maelezo</th><th>Kiasi</th>${adm?"<th></th>":""}</tr>${[...S.expenses].sort((a,b)=>b.date.localeCompare(a.date)).map(e=>`<tr><td>${esc(e.date)}</td><td>${esc(e.desc)} ${e.rc?`<button class="sm sec" onclick="viewRc('e','${e.id}')">Risiti</button>`:""}</td><td>${T(e.amt)}</td>${adm?`<td><button class="sm del" onclick="delE('${e.id}')">Futa</button></td>`:""}</tr>`).join("")}</table></div>`}
+async function delE(id){if(!confirm("Futa matumizi haya?"))return;if(await call("delExpense",{id}))render()}
+
+async function chPass(f){
+ if(f.o.value!==session.p){msg="Nenosiri la sasa si sahihi.";render();return}
+ const n=f.n.value.trim();
+ if(await call("changePass",{newPass:n})){session.p=n;msg="Nenosiri limebadilishwa."}
+ render()}
+function exportData(){const a=document.createElement("a");a.href="data:application/json;charset=utf-8,"+encodeURIComponent(JSON.stringify(S,null,2));a.download="kilimanjaro-family.json";a.click()}
+$("#lg").src=LOGO;render();
+</script>
+</body>
+</html>
